@@ -24,4 +24,5 @@ default_action(:create)
 
 attribute(:username, :kind_of => String, :name_attribute => true)
 attribute(:password, :kind_of => String)
-
+attribute(:admin_username, :kind_of => String, :default => 'root')
+attribute(:admin_password, :kind_of => String, :default => 'root')

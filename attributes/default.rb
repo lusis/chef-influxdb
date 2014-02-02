@@ -35,6 +35,7 @@ default[:influxdb][:versions] = {
   }
 }
 
+default[:influxdb][:delete_default_user] = false # Does nothing yet
 # Grab clients -- right now only supports Ruby and CLI
 default[:influxdb][:client][:cli][:enable] = false
 default[:influxdb][:client][:ruby][:enable] = false

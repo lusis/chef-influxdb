@@ -25,4 +25,5 @@ default_action(:create)
 attribute(:username, :kind_of => String, :name_attribute => true)
 attribute(:password, :kind_of => String)
 attribute(:databases, :kind_of => Array, :required => true)
-
+attribute(:admin_username, :kind_of => String, :default => 'root')
+attribute(:admin_password, :kind_of => String, :default => 'root')

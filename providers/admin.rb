@@ -23,9 +23,11 @@ include InfluxDB::Helpers
 
 def initialize(new_resource, run_context)
   super
-  @client    = InfluxDB::Helpers.client('root', 'root')
   @username  = new_resource.username
   @password  = new_resource.password
+  @admin_username = new_resource.admin_username
+  @admin_password = new_resource.admin_password
+  @client    = InfluxDB::Helpers.client(@admin_username, @admin_password)
 end
 
 action :create do

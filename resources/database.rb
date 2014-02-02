@@ -23,4 +23,5 @@ actions(:create, :delete)
 default_action(:create)
 
 attribute(:name, :kind_of => String, :name_attribute => true)
-
+attribute(:admin_username, :kind_of => String, :default => 'root')
+attribute(:admin_password, :kind_of => String, :default => 'root')
